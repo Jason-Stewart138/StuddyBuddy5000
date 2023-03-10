@@ -1,2 +1,2 @@
-# StuddyBuddy5000
+# StudyBuddy5000
 Personal Copy of Grand Circus Angular Group Project
