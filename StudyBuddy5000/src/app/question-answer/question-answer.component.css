@@ -1,0 +1,26 @@
+main {
+    overflow: hidden;
+}
+
+.answer-container {
+    
+    display:flex;
+    flex-direction:row wrap;
+    justify-content: start;
+    align-items: center;
+
+    padding: 2px;
+    background-color: transparent;
+
+    color: white;
+    height: auto;
+}
+
+.answer {
+
+    background-color: slateblue;
+
+    padding: 5px;
+    height: auto;
+    text-align: left;
+}

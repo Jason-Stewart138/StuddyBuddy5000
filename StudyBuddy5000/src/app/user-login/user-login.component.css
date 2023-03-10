@@ -1,0 +1,20 @@
+input {
+    width: 25%;
+    padding: 2px;
+    border-radius: 10px;
+  }
+  
+  .bunton {
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(25, 71, 199);
+    color:white;
+  }
+  
+  label {
+    font-size: 18px;
+  }
+  
+  .Login-error {
+    color: rgb(255, 0, 51);
+  }
