@@ -10,7 +10,7 @@ import { userData } from './interfaces/userData.interface';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'GC-Bootcamp-StudyBuddy';
+  title = 'StudyBuddy5000';
   studies: questionAnswer[] = []
   isCanHasAnswer: boolean = false;
   question: string = '';

@@ -22,22 +22,22 @@ namespace StudyBuddy5000.Controllers
       return _db.GetAllUsers();
     }
 
-    [HttpGet("Login/{userName}/{password}")]
-    public UserData GetUser(string userName, string password)
+    [HttpGet("Login/{userName}/{userPassword}")]
+    public UserData GetUser(string userName, string userPassword)
     {
       UserData user = _db.GetUser(userName);
-      if (user == null || user.UserPassword != password)
+      if (user == null || user.UserPassword != userPassword)
       {
         return null;
       }
       return user;
     }
 
-    [HttpPost("CreateLogin/{userName}/{password}")]
-    public UserData Post(string userName, string password)
+    [HttpPost("CreateLogin/{userName}/{userPassword}")]
+    public UserData Post(string userName, string userPassword)
     {
 
-      return _db.AddUser(userName, password);
+      return _db.AddUser(userName, userPassword);
     }
 
     [HttpPost("AddUserFavorite/{studyId}/{userId}")]

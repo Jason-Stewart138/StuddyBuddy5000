@@ -10,7 +10,7 @@ main {
     align-items: center;
 
     padding: 2px;
-    background-color: transparent;
+    
 
     color: white;
     height: auto;
@@ -18,7 +18,7 @@ main {
 
 .answer {
 
-    background-color: slateblue;
+    background-color: #393e46;
 
     padding: 5px;
     height: auto;

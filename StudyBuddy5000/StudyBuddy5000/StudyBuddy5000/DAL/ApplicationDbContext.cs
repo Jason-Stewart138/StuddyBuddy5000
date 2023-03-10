@@ -74,7 +74,7 @@ namespace StudyBuddy5000.DAL
       }
       return user;
     }
-    public UserData AddUser(string userName, string password)
+    public UserData AddUser(string userName, string userPassword)
     {
       UserData toAdd = GetUser(userName);
       if (toAdd != null)
@@ -84,7 +84,7 @@ namespace StudyBuddy5000.DAL
       UserData.Add(new UserData()
       {
         UserName = userName,
-        UserPassword = password
+        UserPassword = userPassword
       });
       SaveChanges();
       return GetUser(userName);

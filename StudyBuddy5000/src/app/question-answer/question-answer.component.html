@@ -2,13 +2,13 @@
     <div *ngIf="study !== null">
         <h3>
             {{study.question}}
-            <span (click)="fravritClicked()" id="fravrit-star">
-                <i appFravrit class="bi bi-star-fill"></i>
+            <span (click)="favoriteClick()" id="favorite-star">
+                <i appFavorite class="bi-star-fill"></i>
             </span>
         </h3>
 
         <button (click)="answerTransition($event)" class="bunton">
-            <i class="bi bi-patch-question-fill"></i>Show Answer&nbsp; &nbsp; </button>
+            Show Answer&nbsp; &nbsp; </button>
 
         <br>
         <div class="answer-container" [@answerState]="answerState">

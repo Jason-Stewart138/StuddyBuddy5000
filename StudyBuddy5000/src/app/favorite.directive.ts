@@ -72,7 +72,7 @@ export class FavoriteDirective implements OnInit {
       this.render.setStyle(
         target,
         'color',
-        'white'
+        'gray'
       )
       //this.api.onComponentLoad();
     }

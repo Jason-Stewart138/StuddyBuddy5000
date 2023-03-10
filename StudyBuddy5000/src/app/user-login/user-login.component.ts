@@ -44,7 +44,7 @@ export class UserLoginComponent implements OnInit {
   }
   isPassword(user:userData, password:string) {
     
-    return user.password === password;
+    return user.userPassword === password;
   }
   getUser(userName: string, password: string) {
     let user = this.isRegistered(userName);
@@ -82,7 +82,7 @@ export class UserLoginComponent implements OnInit {
     this.api.registerUser({
       id:-1,
       userName:userName,
-      password:password
+      userPassword:password
     });
 
   }
@@ -95,8 +95,8 @@ export class UserLoginComponent implements OnInit {
   onLogin(form: NgForm) {
     let name = form.form.value.userName;
     let pass = form.form.value.password;
-
-    if(!name || !pass || !this.users.some(x=> x.userName === name && x.password === pass)){
+//debugger;
+    if(!name || !pass || !this.users.some(x=> x.userName === name && x.userPassword === pass)){
       this.loginError = true;
       this.errorMessage = 'Incorrect username or password...';
       form.resetForm()
@@ -134,12 +134,12 @@ export class UserLoginComponent implements OnInit {
     this.api.registerUser({
       id:-1,
       userName:name,
-      password:pass
+      userPassword:pass
     })
     this.api.setUser({
       id:-1,
       userName:name,
-      password:pass
+      userPassword:pass
     }) // passing the currently logged in user back to service so it is globally available, has to be done this way...
 
   }

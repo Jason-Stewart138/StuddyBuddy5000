@@ -21,14 +21,16 @@ import { UserLogoutComponent } from './user-logout/user-logout.component';
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionAnswerComponent,
     HeaderComponent,
+    NavComponent,
+    QuestionAnswerComponent,
+    
     FavoriteDirective,
     UserLoginComponent,
     HomeComponent,
     CreateQuestionComponent,
     WelcomeComponent,
-    NavComponent,
+    
 
     UserLogoutComponent
 

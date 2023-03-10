@@ -16,8 +16,10 @@ export class ApiService {
   selectFavoriteURI: string = 'https://localhost:7215/api/UserData/AddUserFavorite/';
   removeFavoriteURI: string = 'https://localhost:7215/api/UserData/DeleteUserFavorite/';
   studyURI: string = 'https://localhost:7215/api/QuestionsAnswers';
+
   bounceFromNavToStudy:EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
   loggedInUser: LoggedInUser | null = null;
+
   @Output()doorBell:EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
   @Output() loggedInEvent: EventEmitter<LoggedInUser> = new EventEmitter<LoggedInUser>();
   @Output() showAnswersEvent:EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -65,7 +67,7 @@ export class ApiService {
 
   getLoggedInUserFavorites(user:userData) {
 
-      return this.http.get<questionAnswer[]>(this.studyURI + `GetAllUserFavorites/${user.id}`)
+      return this.http.get<questionAnswer[]>(this.studyURI + `/GetAllUserFavorites/${user.id}`)
       .subscribe(
         (x) => {
           if(x){
@@ -85,8 +87,8 @@ export class ApiService {
 
   getUser(user: userData) { // api call to get the user that logged in, only used by login component
     let userName = user.userName;
-    let password = user.password;
-    return this.http.get<userData>(this.userURI + `Login/${userName}/${password}`)
+    let userPassword = user.userPassword;
+    return this.http.get<userData>(this.userURI + `Login/${userName}/${userPassword}`)
     .subscribe(
       (x) => {
         let user:userData;
@@ -113,7 +115,7 @@ export class ApiService {
 
   registerUser(user: userData) { // api call to add the newly registered user, only used by login component
     let userName = user.userName;
-    let password = user.password;
+    let password = user.userPassword;
     return this.http.post<userData>(this.userURI + `CreateLogin/${userName}/${password}`, user)
     .subscribe(
       (x) => {
@@ -145,7 +147,7 @@ export class ApiService {
     let answer = study.answer.split(
       ' '
     ).join('%20');
-    return this.http.post(this.studyURI + `AddQuestionAnswer/${question}/${answer}`, study);
+    return this.http.post(this.studyURI + `/AddQuestionAnswer/${question}/${answer}`, study);
   }
   homeComponentShowAnswersClick(e:boolean) {
     return this.showAnswersEvent.emit(e);

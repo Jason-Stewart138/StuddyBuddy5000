@@ -70,7 +70,7 @@ export class QuestionAnswerComponent implements OnInit {
     }
   }
 
-  fravritClicked() {
+  favoriteClick() {
     this.study = this.study as questionAnswer
     this.api.selectFavorite(this.study.id);
     return this.clicked.emit(true);

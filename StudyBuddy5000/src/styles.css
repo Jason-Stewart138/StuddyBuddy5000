@@ -1,3 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 
@@ -5,17 +6,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #4361EE;
+    background-color: #f7f7f7;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 200px 1fr 0px;
-    grid-template-rows: auto 1fr auto;
-    grid-gap: 2px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1px;
     grid-template-areas:
-        "header header header"
-        "nav content side";        
+        "header header"
+        "nav content";
     height: 100vh;
 
 }
@@ -25,32 +26,32 @@ app-header {
     font-size: 16px;
     grid-area: header;
     text-align: center;
-    background-color: #3A0CA3;
+    background-color: #393e46;
 }
 
 
 app-nav {
-    color: white;
+    color: #393e46;
     grid-area: nav;
-    margin-left: 0.1rem;
-    background-color: #7209B7;
+    background-color: #929aab;
 
 }
 
-app-study,
-app-create-study,
+app-question-answer,
+app-create-question,
 app-user-login,
 app-user-logout,
 app-home {
     grid-area: content;
-    background-color: #4361EE;
+    background-color: #eeeeee;
     padding: 10px;
-    color:white;
-    height:auto;
+    color: #393e46;
+    height: auto;
 }
 
-.bi {
+.bi-star-fill {
     float: right;
+    
 }
 
 .form {
@@ -60,44 +61,37 @@ app-home {
 }
 
 a:link {
-    color: white;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: white;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: hotpink;
-    font-style:italic;
-  }
-  
-  /* selected link */
-  a:active {
-    color: pink;
-  }
+    color: #393e46;
+}
 
-  .yello-color
-  {
-    color:yellow;
-  }
+/* visited link */
+a:visited {
+    color: #393e46;
+}
 
+/* mouse over link */
+a:hover {
+    color: white;
+    font-style: italic;
+}
+
+.yello-color {
+    color: yellow;
+}
 
 .bunton {
     border: none;
     border-radius: 4px;
-    color: #4361EE;
-    background-color: #eef1e8;
+    color: #393e46;
+    
     box-shadow: 1px 0 1px 0 #808080;
 }
 
 .topButton {
-    border: none;
+    border: #393e46;
     border-radius: 4px;
-    color: #4361EE;
-    background-color: #ffffff;
+    color: #393e46;
+    
     box-shadow: 1px 0 1px 0 #808080;
 }
 
