@@ -100,6 +100,7 @@ export class UserLoginComponent implements OnInit {
       this.loginError = true;
       this.errorMessage = 'Incorrect username or password...';
       form.resetForm()
+      debugger;
       return;
     }
     this.getUser(name, pass)
